@@ -27,7 +27,7 @@ namespace FinancialDataModelAPI
 
         [FunctionName("ValidateProjectCode")]
         [OpenApiOperation(operationId: "Run", tags: new[] { "Validate Cost Codes" })]
-        [OpenApiSecurity("function_key", SecuritySchemeType.ApiKey, Name = "code", In = OpenApiSecurityLocationType.Query)]
+        //[OpenApiSecurity("function_key", SecuritySchemeType.ApiKey, Name = "code", In = OpenApiSecurityLocationType.Query)]
         [OpenApiRequestBody(contentType: "application/json", bodyType: typeof(CCObject), Description = "Request Body. Requires both Fund and Project Code", Required = true)]
         [OpenApiResponseWithBody(statusCode: HttpStatusCode.OK, contentType: "application/json", bodyType: typeof(string), Description = "The OK response")]
         [OpenApiResponseWithBody(statusCode: HttpStatusCode.BadRequest, contentType: "application/json", bodyType: typeof(string), Description = "Improper Request Body.")]
@@ -97,7 +97,7 @@ namespace FinancialDataModelAPI
 
         [FunctionName("ValidateProjectList")]
         [OpenApiOperation(operationId: "RunList", tags: new[] { "Validate Cost Code List" })]
-        [OpenApiSecurity("function_key", SecuritySchemeType.ApiKey, Name = "code", In = OpenApiSecurityLocationType.Query)]
+        //[OpenApiSecurity("function_key", SecuritySchemeType.ApiKey, Name = "code", In = OpenApiSecurityLocationType.Query)]
         [OpenApiRequestBody(contentType: "application/json", bodyType: typeof(List<CCObject>), Description = "Request Body. Requires list of objects including fund and Project Code", Required = true)]
         [OpenApiResponseWithBody(statusCode: HttpStatusCode.OK, contentType: "application/json", bodyType: typeof(string), Description = "The OK response")]
         [OpenApiResponseWithBody(statusCode: HttpStatusCode.BadRequest, contentType: "application/json", bodyType: typeof(string), Description = "Improper Request Body.")]
