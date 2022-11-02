@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Cost_Center_Codes": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7115",
+      "launchBrowser": false
+    }
+  }
+}
